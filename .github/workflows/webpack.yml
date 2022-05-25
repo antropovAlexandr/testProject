@@ -1,0 +1,47 @@
+name: Gustave-agent-plugin build
+
+on:
+  push:
+  pull_request:
+    branches:
+      - 'master'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16.x'
+
+    - name: Build Options project
+      run: |
+        cd options
+        npm install
+        npm run build
+        cd ..
+
+    - name: Build Main project
+      run: |
+        npm install
+        npm run build:prod
+      env:
+        CI: true
+        API_KEY: ${{ secrets.API_KEY }}
+        LINKEDIN_API_ROOT: ${{ secrets.LINKEDIN_API_ROOT }}
+        CAMPAIGN_ID: ${{ secrets.CAMPAIGN_ID }}
+
+    - name: Add artifacts to publish to the temp folder
+      run: |
+        mkdir downloads
+        cp ./build/zips/*.zip ./downloads
+
+    - name: Use the Upload Artifact GitHub Action
+      uses: actions/upload-artifact@v3
+      with:
+        name: Download plugin file
+        path: downloads
