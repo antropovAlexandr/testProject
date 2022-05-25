@@ -1,10 +1,9 @@
 name: Gustave-agent-plugin build
 
 on:
-  push:
   pull_request:
     branches:
-      - 'origin/master'
+      - 'master'
 
 jobs:
   build:
