@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/antropovAlexandr/testProject/compare/v1.0.0...v2.0.0) (2022-06-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* add row
+
+### Features
+
+* add row ([8a492ab](https://github.com/antropovAlexandr/testProject/commit/8a492ab4eb41dfe4d004a41b81c6536bc498def2))
+
 ## 1.0.0 (2022-06-19)
 
 
