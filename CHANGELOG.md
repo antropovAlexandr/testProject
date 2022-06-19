@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/antropovAlexandr/testProject/compare/v2.2.0...v2.3.0) (2022-06-19)
+
+
+### Features
+
+* add extra file ([4a331bf](https://github.com/antropovAlexandr/testProject/commit/4a331bf9c7040e459b75217e33522ba0ca1f06da))
+
 ## [2.2.0](https://github.com/antropovAlexandr/testProject/compare/v2.1.0...v2.2.0) (2022-06-19)
 
 
