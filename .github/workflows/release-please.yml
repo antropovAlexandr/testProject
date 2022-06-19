@@ -11,3 +11,6 @@ jobs:
         with:
           release-type: node
           package-name: release-please-action
+          extra-files: |
+            README.md
+            docs/getting-started.md
