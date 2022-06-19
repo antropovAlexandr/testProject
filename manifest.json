@@ -1,6 +1,6 @@
 {
   "name": "Gustave Agent Plugin Queue",
-  "version": "3.0.3",
+  "version": "2.6.0",
   "description": "Gustave Agent Plugin for Auto Queue process on Search Pages",
   "manifest_version": 2,
   "permissions": [
