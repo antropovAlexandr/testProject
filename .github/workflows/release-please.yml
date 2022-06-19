@@ -11,14 +11,14 @@ jobs:
         with:
           release-type: node
           package-name: release-please-action
-      - uses: google-github-actions/release-please-action@v3
+#      - uses: google-github-actions/release-please-action@v3
 #        id: release
-        with:
-          release-type: node
-          package-name: manifest.json
+#        with:
+#          release-type: node
+#          package-name: manifest.json
 #          command: manifest
 #          path: /build/dist/GustaveAgentPlugin
-#          extra-files:
+#          extra-files: /manifest.json
 #            type: json
 #            path: build/dist/GustaveAgentPlugin/manifest.json
 #            jsonpath: $.json.path.to.field
