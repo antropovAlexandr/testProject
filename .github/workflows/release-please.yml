@@ -13,6 +13,7 @@ jobs:
           package-name: release-please-action
           command: manifest
 #          path: /build/dist/GustaveAgentPlugin
-#          extra-files: |
+          extra-files: |
+            build/dist/GustaveAgentPlugin/manifest.json
 #            README.md
 #            docs/getting-started.md
