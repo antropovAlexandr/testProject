@@ -11,7 +11,7 @@ jobs:
         with:
           release-type: node
           package-name: release-please-action
-          command: manifest
+#          command: manifest
 #          path: /build/dist/GustaveAgentPlugin
           extra-files: |
             build/dist/GustaveAgentPlugin/manifest.json
