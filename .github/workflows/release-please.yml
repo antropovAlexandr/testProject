@@ -12,7 +12,7 @@ jobs:
           release-type: node
           package-name: release-please-action
           command: manifest
-          path: ./build/dist/GustaveAgentPlugin
+          path: /build/dist/GustaveAgentPlugin
 #          extra-files: |
 #            README.md
 #            docs/getting-started.md
