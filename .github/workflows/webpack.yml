@@ -31,6 +31,9 @@ jobs:
       id: set_var
       run: |
         content=`cat ./downloads/manifest.json`
+        content="${content//'%'/'%25'}"
+        content="${content//$'\n'/'%0A'}"
+        content="${content//$'\r'/'%0D'}"
         echo "::set-output name=packageJson::$content"
 
     - run: |
