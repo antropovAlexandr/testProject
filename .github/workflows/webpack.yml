@@ -42,5 +42,5 @@ jobs:
     - name: Use the Upload Artifact GitHub Action
       uses: actions/upload-artifact@v3
       with:
-        name: Reffy plugin
+        name: Reffy plugin ${{fromJson(steps.set_var.outputs.packageJson).version}}
         path: downloads
