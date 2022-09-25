@@ -26,8 +26,15 @@ jobs:
       run: |
         mkdir downloads
         cp ./build/* ./downloads
-        echo "version: ${{$(node -p -e "require('./downloads/manifest.json').version")}}"
-        
+
+    - name: Read version
+      id: set_var
+      run: |
+        content=`cat ./downloads/manifest.json`
+        echo "::set-output name=packageJson::$content"
+
+    - run: |
+        echo "${{fromJson(steps.set_var.outputs.packageJson).version}}"
 
     - name: Use the Upload Artifact GitHub Action
       uses: actions/upload-artifact@v3
