@@ -26,7 +26,8 @@ jobs:
       run: |
         mkdir downloads
         cp ./build/* ./downloads
-        echo "version: ${{node -p -e "require('./manifest.json').version"}}"
+        CURRENT_VERSION=$(node -p -e "require('./downloads/manifest.json').version")
+        echo "version: ${{CURRENT_VERSION}}"
         
 
     - name: Use the Upload Artifact GitHub Action
